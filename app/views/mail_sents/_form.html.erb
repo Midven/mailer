@@ -1,6 +1,6 @@
 <%= debug params %>
 
-<%= form_with(model: mail, url: new_message_mail_sent_path, method: :post) do |form| %>
+<%= form_with(model: mail, url: message_mail_sents_url, method: :post) do |form| %>
     
     <% if mail.errors.any? %>
         <div style="color: red">

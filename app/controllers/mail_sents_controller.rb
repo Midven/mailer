@@ -35,9 +35,11 @@ class MailSentsController < ApplicationController
 
 
         if @mail.save
+            MailSentMailer.send_mail(@mail).deliver_now
+            
             redirect_to message_mail_sents_path
             
-            flash[:notice] = "Article was created successfully."
+            flash[:notice] = "Your mail was sended successfully."
         else
             render 'new'
         end

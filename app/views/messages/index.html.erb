@@ -1,12 +1,15 @@
 <h1>My Messages</h1>
 
+
 <%= link_to "New message", new_message_path, class: "btn btn-primary mt-3" %>
+
 
 <div id="messages">
   <% @messages.each do |message| %>
     <%= render message %>
     <p>
       <%= link_to "-> Show this message", message, class: "btn btn-primary mt-3" %>
+      <%= link_to "Send this message", message_mail_sents_url(message), class: "btn btn-primary mt-3" %>
     </p>
   <% end %>
 </div>

@@ -90,7 +90,7 @@ class MessagesController < ApplicationController
     
     def require_same_user
         if current_user != @message.user
-          flash[:alert] = "You can only edit or delete your own article"
+          flash[:alert] = "You can only edit or delete your own message"
           redirect_to @message
         end
     end
