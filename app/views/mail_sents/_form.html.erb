@@ -30,7 +30,7 @@
     <div class="form-group row mt-4">
         <%= form.label :content, class: "col-2 col-form-label text-dark" %>
         <div class="col-10">
-          <%= form.text_area :content, rows: 10, value: @message.content , class: "form-control shadow rounded" %>
+          <%= form.rich_text_area :content, rows: 10, value: @message.content , class: "form-control shadow rounded" %>
         </div>
     </div>
     
